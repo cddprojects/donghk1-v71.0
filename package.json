@@ -1,0 +1,8 @@
+{
+  "name": "bridgefinds-hk-landing",
+  "private": true,
+  "scripts": {
+    "preview": "npx --yes serve@14 . -l 8765 --no-request-logging",
+    "preview:8080": "npx --yes serve@14 . -l 8080 --no-request-logging"
+  }
+}

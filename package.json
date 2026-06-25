@@ -1,5 +1,5 @@
 {
-  "name": "hiredsphere-hk-landing",
+  "name": "flexiseek-hk-landing",
   "private": true,
   "scripts": {
     "preview": "npx --yes serve@14 . -l 8765 --no-request-logging",

@@ -24,7 +24,7 @@ Before generating, read existing brand assets in `assets/` to extract:
 3. **Favicon** (`assets/favicon.png`) — browser tab icon. Must be **visually distinct** from the logo icon (different motif or simplified mark) while keeping the same palette and flat sticker aesthetic.
 4. **Full logo (optional)** — horizontal lockup with brand name text when user requests text in the logo file itself.
 
-## Brand palette (Hired Sphere)
+## Brand palette (Flexi Seek)
 
 | Role | Hex |
 |------|-----|

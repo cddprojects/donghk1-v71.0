@@ -998,56 +998,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 
     .role-card.is-featured {
-      grid-column: 1 / -1;
-      padding: 28px 28px 26px;
+      position: relative;
       background:
-        radial-gradient(circle at 100% 0%, rgba(107, 183, 255, 0.34), transparent 34%),
-        radial-gradient(circle at 0% 100%, rgba(255, 214, 107, 0.42), transparent 38%),
-        linear-gradient(135deg, #fff9ef 0%, #eef8ff 52%, #fff4dc 100%);
+        radial-gradient(circle at 100% 0%, rgba(107, 183, 255, 0.22), transparent 42%),
+        linear-gradient(160deg, #fff9ef 0%, #f3f9ff 100%);
       border-color: var(--blue-dark);
-      box-shadow: 10px 10px 0 rgba(50, 123, 214, 0.28), 0 0 0 4px var(--ink);
+      box-shadow: 8px 8px 0 rgba(50, 123, 214, 0.22);
     }
 
     .role-card.is-featured:hover {
-      transform: translate(-3px, -3px);
-      box-shadow: 12px 12px 0 rgba(50, 123, 214, 0.32), 0 0 0 4px var(--ink);
+      transform: translate(-2px, -2px);
+      box-shadow: 10px 10px 0 rgba(50, 123, 214, 0.26);
     }
 
-    .role-featured-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 14px;
-      padding: 7px 14px;
-      border-radius: 999px;
-      background: var(--yellow);
-      border: 3px solid var(--ink);
-      color: var(--ink);
-      font-size: 12px;
-      font-weight: 950;
-      letter-spacing: 0.02em;
-      box-shadow: 4px 4px 0 rgba(23, 32, 51, 0.16);
+    .role-pin {
+      position: absolute;
+      top: -10px;
+      left: 22px;
+      width: 28px;
+      height: 28px;
+      color: #e53935;
+      filter: drop-shadow(0 2px 0 rgba(23, 32, 51, 0.18));
+      pointer-events: none;
     }
 
-    .role-featured-badge::before {
-      content: "★";
-      font-size: 13px;
-    }
-
-    .role-card.is-featured h3 {
-      font-size: clamp(24px, 3vw, 30px);
-      letter-spacing: -0.05em;
+    .role-pin svg {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     .role-card.is-featured .role-salary {
       background: var(--white);
-      border-color: rgba(50, 123, 214, 0.28);
-      font-size: 15px;
+      border-color: rgba(50, 123, 214, 0.22);
     }
 
     .role-card.is-featured .role-facts {
-      background: rgba(255, 255, 255, 0.72);
-      border-color: rgba(50, 123, 214, 0.16);
+      background: rgba(255, 255, 255, 0.68);
+      border-color: rgba(50, 123, 214, 0.12);
     }
 
     .role-card.is-featured .role-status.is-hot {
@@ -1067,14 +1055,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     .role-card.is-featured .role-apply:hover {
       background: #ffcd45;
-    }
-
-    .role-featured-hook {
-      margin: -2px 0 14px;
-      color: rgba(23, 32, 51, 0.82);
-      font-size: 15px;
-      line-height: 1.65;
-      font-weight: 800;
     }
 
     .role-card-top {
@@ -2095,7 +2075,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="role-grid" id="role-grid">
           <article class="role-card is-featured" data-types="fulltime parttime" data-category="finance admin"
             data-job="forex-data-analyst">
-            <div class="role-featured-badge">熱門職位 · 新登場</div>
+            <span class="role-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/>
+              </svg>
+            </span>
             <div class="role-card-top">
               <div class="role-tags">
                 <span class="role-tag is-finance">金融分析</span>
@@ -2106,7 +2090,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="role-status is-hot">熱門登記中</span>
             </div>
             <h3>外匯數據分析助理</h3>
-            <p class="role-featured-hook">香港金融市場相關遙距職位，協助整理匯率數據及簡單報表，毋須相關學歷即可登記。</p>
             <div class="role-salary">全職 HKD 16,000–22,000／月 · 兼職 HKD 70–100／小時</div>
             <dl class="role-facts">
               <div class="role-fact">
@@ -2129,7 +2112,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li>細心準確；對數字及外匯資訊有基本興趣</li>
               <li>毋須相關學歷</li>
             </ul>
-            <a href="#interest-form" class="btn btn-primary role-apply">立即登記此職位</a>
+            <a href="#interest-form" class="btn btn-primary role-apply">登記此類別</a>
           </article>
 
           <article class="role-card" data-types="fulltime parttime" data-category="admin ecommerce"

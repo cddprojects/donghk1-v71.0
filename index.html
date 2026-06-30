@@ -1011,29 +1011,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 10px 10px 0 rgba(50, 123, 214, 0.26);
     }
 
+    .role-card-badges {
+      display: flex;
+      align-items: flex-start;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+
     .role-pin {
+      position: relative;
       display: inline-flex;
       flex-shrink: 0;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      width: 20px;
-      height: 24px;
-      transform: rotate(-8deg);
-      filter: drop-shadow(1px 1px 0 rgba(23, 32, 51, 0.14));
+      width: 22px;
+      height: 32px;
+      margin: -20px -2px 0 6px;
+      transform: rotate(10deg);
+      transform-origin: 50% 88%;
+      filter: drop-shadow(1px 2px 0 rgba(23, 32, 51, 0.18));
       pointer-events: none;
+      z-index: 2;
     }
 
     .role-pin svg {
       display: block;
       width: 100%;
       height: 100%;
-    }
-
-    .role-card-badges {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
     }
 
     .role-card.is-featured .role-salary {
@@ -2091,6 +2095,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="role-tag is-remote">遙距</span>
               </div>
               <div class="role-card-badges">
+                <span class="role-status is-hot">熱門登記中</span>
                 <span class="role-pin" aria-hidden="true">
                   <svg viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="16" y1="15" x2="16" y2="37" stroke="#78909c" stroke-width="2.2" stroke-linecap="round"/>
@@ -2099,7 +2104,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ellipse cx="16" cy="12.8" rx="5.5" ry="1.6" fill="#b71c1c" fill-opacity="0.45"/>
                   </svg>
                 </span>
-                <span class="role-status is-hot">熱門登記中</span>
               </div>
             </div>
             <h3>外匯數據分析助理</h3>

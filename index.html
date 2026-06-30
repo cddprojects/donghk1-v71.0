@@ -997,6 +997,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: none;
     }
 
+    .role-card.is-featured {
+      grid-column: 1 / -1;
+      padding: 28px 28px 26px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(107, 183, 255, 0.34), transparent 34%),
+        radial-gradient(circle at 0% 100%, rgba(255, 214, 107, 0.42), transparent 38%),
+        linear-gradient(135deg, #fff9ef 0%, #eef8ff 52%, #fff4dc 100%);
+      border-color: var(--blue-dark);
+      box-shadow: 10px 10px 0 rgba(50, 123, 214, 0.28), 0 0 0 4px var(--ink);
+    }
+
+    .role-card.is-featured:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 12px 12px 0 rgba(50, 123, 214, 0.32), 0 0 0 4px var(--ink);
+    }
+
+    .role-featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--yellow);
+      border: 3px solid var(--ink);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.02em;
+      box-shadow: 4px 4px 0 rgba(23, 32, 51, 0.16);
+    }
+
+    .role-featured-badge::before {
+      content: "★";
+      font-size: 13px;
+    }
+
+    .role-card.is-featured h3 {
+      font-size: clamp(24px, 3vw, 30px);
+      letter-spacing: -0.05em;
+    }
+
+    .role-card.is-featured .role-salary {
+      background: var(--white);
+      border-color: rgba(50, 123, 214, 0.28);
+      font-size: 15px;
+    }
+
+    .role-card.is-featured .role-facts {
+      background: rgba(255, 255, 255, 0.72);
+      border-color: rgba(50, 123, 214, 0.16);
+    }
+
+    .role-card.is-featured .role-status.is-hot {
+      background: var(--orange);
+      color: var(--ink);
+    }
+
+    .role-tag.is-finance {
+      background: var(--purple);
+      color: var(--ink);
+    }
+
+    .role-card.is-featured .role-apply {
+      background: var(--yellow);
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .role-card.is-featured .role-apply:hover {
+      background: #ffcd45;
+    }
+
+    .role-featured-hook {
+      margin: -2px 0 14px;
+      color: rgba(23, 32, 51, 0.82);
+      font-size: 15px;
+      line-height: 1.65;
+      font-weight: 800;
+    }
+
     .role-card-top {
       display: flex;
       align-items: start;
@@ -2013,6 +2093,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="role-grid" id="role-grid">
+          <article class="role-card is-featured" data-types="fulltime parttime" data-category="finance admin"
+            data-job="forex-data-analyst">
+            <div class="role-featured-badge">熱門職位 · 新登場</div>
+            <div class="role-card-top">
+              <div class="role-tags">
+                <span class="role-tag is-finance">金融分析</span>
+                <span class="role-tag">全職</span>
+                <span class="role-tag">兼職</span>
+                <span class="role-tag is-remote">遙距</span>
+              </div>
+              <span class="role-status is-hot">熱門登記中</span>
+            </div>
+            <h3>外匯數據分析助理</h3>
+            <p class="role-featured-hook">香港金融市場相關遙距職位，協助整理匯率數據及簡單報表，毋須相關學歷即可登記。</p>
+            <div class="role-salary">全職 HKD 16,000–22,000／月 · 兼職 HKD 70–100／小時</div>
+            <dl class="role-facts">
+              <div class="role-fact">
+                <dt>工作性質</dt>
+                <dd>全職／兼職</dd>
+              </div>
+              <div class="role-fact">
+                <dt>工作地點</dt>
+                <dd>遙距／在家工作</dd>
+              </div>
+              <div class="role-fact">
+                <dt>結算週期</dt>
+                <dd>全職月結；兼職周結</dd>
+              </div>
+            </dl>
+            <p class="role-summary"><strong>簡介：</strong>協助整理匯率數據、製作簡單報表、更新外匯相關資料表，支援團隊監察市場動態。</p>
+            <p class="role-summary"><strong>要求：</strong></p>
+            <ul class="role-requirements">
+              <li>熟悉 Excel／Google Sheets</li>
+              <li>細心準確；對數字及外匯資訊有基本興趣</li>
+              <li>毋須相關學歷</li>
+            </ul>
+            <a href="#interest-form" class="btn btn-primary role-apply">立即登記此職位</a>
+          </article>
+
           <article class="role-card" data-types="fulltime parttime" data-category="admin ecommerce"
             data-job="product-data">
             <div class="role-card-top">
@@ -2356,42 +2475,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="role-requirements">
               <li>中文書寫通順；懂英文更佳</li>
               <li>有電商或零售文案經驗優先</li>
-            </ul>
-            <a href="#interest-form" class="btn btn-primary role-apply">登記此類別</a>
-          </article>
-
-          <article class="role-card" data-types="fulltime parttime" data-category="finance admin"
-            data-job="forex-data-analyst">
-            <div class="role-card-top">
-              <div class="role-tags">
-                <span class="role-tag">全職</span>
-                <span class="role-tag">兼職</span>
-                <span class="role-tag is-remote">遙距</span>
-              </div>
-              <span class="role-status">開放登記</span>
-            </div>
-            <h3>外匯數據分析助理</h3>
-            <div class="role-salary">全職 HKD 16,000–22,000／月 · 兼職 HKD 70–100／小時</div>
-            <dl class="role-facts">
-              <div class="role-fact">
-                <dt>工作性質</dt>
-                <dd>全職／兼職</dd>
-              </div>
-              <div class="role-fact">
-                <dt>工作地點</dt>
-                <dd>遙距／在家工作</dd>
-              </div>
-              <div class="role-fact">
-                <dt>結算週期</dt>
-                <dd>全職月結；兼職周結</dd>
-              </div>
-            </dl>
-            <p class="role-summary"><strong>簡介：</strong>協助整理匯率數據、製作簡單報表、更新外匯相關資料表，支援團隊監察市場動態。</p>
-            <p class="role-summary"><strong>要求：</strong></p>
-            <ul class="role-requirements">
-              <li>熟悉 Excel／Google Sheets</li>
-              <li>細心準確；對數字及外匯資訊有基本興趣</li>
-              <li>毋須相關學歷</li>
             </ul>
             <a href="#interest-form" class="btn btn-primary role-apply">登記此類別</a>
           </article>

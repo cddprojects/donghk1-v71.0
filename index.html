@@ -1012,13 +1012,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 
     .role-pin {
-      position: absolute;
-      top: -16px;
-      left: 20px;
-      width: 26px;
-      height: 34px;
-      transform: rotate(-10deg);
-      filter: drop-shadow(1px 2px 0 rgba(23, 32, 51, 0.2));
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 24px;
+      transform: rotate(-8deg);
+      filter: drop-shadow(1px 1px 0 rgba(23, 32, 51, 0.14));
       pointer-events: none;
     }
 
@@ -1026,6 +1027,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: block;
       width: 100%;
       height: 100%;
+    }
+
+    .role-card-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
     }
 
     .role-card.is-featured .role-salary {
@@ -2075,14 +2083,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="role-grid" id="role-grid">
           <article class="role-card is-featured" data-types="fulltime parttime" data-category="finance admin"
             data-job="forex-data-analyst">
-            <span class="role-pin" aria-hidden="true">
-              <svg viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="16" y1="15" x2="16" y2="37" stroke="#78909c" stroke-width="2.2" stroke-linecap="round"/>
-                <ellipse cx="16" cy="10.5" rx="9.5" ry="8.5" fill="#e53935"/>
-                <ellipse cx="13" cy="7.8" rx="2.8" ry="2.2" fill="#fff" fill-opacity="0.42"/>
-                <ellipse cx="16" cy="12.8" rx="5.5" ry="1.6" fill="#b71c1c" fill-opacity="0.45"/>
-              </svg>
-            </span>
             <div class="role-card-top">
               <div class="role-tags">
                 <span class="role-tag is-finance">金融分析</span>
@@ -2090,7 +2090,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="role-tag">兼職</span>
                 <span class="role-tag is-remote">遙距</span>
               </div>
-              <span class="role-status is-hot">熱門登記中</span>
+              <div class="role-card-badges">
+                <span class="role-pin" aria-hidden="true">
+                  <svg viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="16" y1="15" x2="16" y2="37" stroke="#78909c" stroke-width="2.2" stroke-linecap="round"/>
+                    <ellipse cx="16" cy="10.5" rx="9.5" ry="8.5" fill="#e53935"/>
+                    <ellipse cx="13" cy="7.8" rx="2.8" ry="2.2" fill="#fff" fill-opacity="0.42"/>
+                    <ellipse cx="16" cy="12.8" rx="5.5" ry="1.6" fill="#b71c1c" fill-opacity="0.45"/>
+                  </svg>
+                </span>
+                <span class="role-status is-hot">熱門登記中</span>
+              </div>
             </div>
             <h3>外匯數據分析助理</h3>
             <div class="role-salary">全職 HKD 16,000–22,000／月 · 兼職 HKD 70–100／小時</div>
